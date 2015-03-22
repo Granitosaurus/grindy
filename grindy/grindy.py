@@ -1,5 +1,4 @@
 from collections import Counter
-import grindy.argparser
 from difflib import SequenceMatcher
 from datetime import datetime
 import time
@@ -136,7 +135,3 @@ class Grindy():
             self.stats['total_time'] = time.strftime('%H:%M:%S', time.gmtime(self.stats['total_time']))
         else:
             self.stats['total_time'] = time.strftime('%M:%S', time.gmtime(self.stats['total_time']))
-
-
-if __name__ == '__main__':
-    grindy.argparser.GrindyArgparser()

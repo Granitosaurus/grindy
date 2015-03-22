@@ -1,7 +1,8 @@
-import argparse
 import os
+import argparse
 import sys
 from colorama import Fore
+from grindy import decks
 from grindy.grindy import Grindy
 from grindy.tools.make_deck import make_deck
 from grindy.utils import LINE, print_color
@@ -64,4 +65,5 @@ class GrindyArgparser:
             if deck_name.lower() == deck.lower():
                 return location
 
-
+if __name__ == '__main__':
+    GrindyArgparser()

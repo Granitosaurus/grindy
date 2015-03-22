@@ -1,10 +1,10 @@
 from setuptools import setup
 
 setup(
-    name='grindy',
+    name='Grindy',
     version='0.1',
     packages=['grindy.decks', 'grindy.tools', 'grindy.rating'],
-    url='https://github.com/Granitas',
+    url='https://github.com/Granitas/Grindy',
     license='GPL',
     author='Granitas',
     author_email='bernardas.alisauskas@gmail.com',
