@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='grindy',
     version='0.1',
-    packages=['decks', 'tools', 'rating'],
+    packages=['grindy.decks', 'grindy.tools', 'grindy.rating'],
     url='https://github.com/Granitas',
     license='GPL',
     author='Granitas',
