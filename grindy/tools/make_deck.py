@@ -1,7 +1,7 @@
 import os
 import re
 from grindy.deck import Question, Deck
-
+from grindy import decks
 HINT_COVERAGE = 30
 
 
