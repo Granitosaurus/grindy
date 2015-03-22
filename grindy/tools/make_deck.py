@@ -17,7 +17,7 @@ def make_deck(name):
         name = name + '.json' if not name.endswith('.json') else name
         save_location = os.path.join(os.path.dirname(decks.__file__), name)
         deck = Deck(save_location, questions)
-        print('deck {} has been saved!'.format(name.replace('')))
+        print('deck {} has been saved!'.format(name.replace('.json', '')))
         deck.save_deck()
 
 
