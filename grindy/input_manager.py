@@ -3,7 +3,6 @@ import re
 
 from colorama import Fore
 
-from grindy.rating.rating_manager import rate
 from grindy.rating.ratting_settings import HINT_COVERAGE
 from grindy.utils import print_color
 
@@ -13,11 +12,11 @@ HELP = '''commands:
 -r question rating.
 -t times question answered.
 -lr last time the question was answered.
-'''
+-set_rating set rating (0 =< value =< 100)'''
 
 
 def find_arguments(text):
-    return re.findall('\B(-[^\b|^\s]+)', text)
+    return re.findall('\B-+([^\b|^\s]+)(?:\s|)([^-]+|-\d+|)', text)
 
 
 def generate_hint(answer):
@@ -38,32 +37,35 @@ def sinput(text, question, grindy):
 
     if question:
         found_arguments = find_arguments(value)
-        for arg in found_arguments:
-            if arg == '-h':
+        for arg, value in found_arguments:
+            value = value.strip()
+            if arg == 'h':
                 print_color('Hint: {}'.format(question.hint
                                               or generate_hint(question.answer)
                                               if grindy.auto_hints else ''), Fore.YELLOW)
                 continue
-            if arg == '-r':
+            if arg == 'r':
                 print_color('Rating: {}'.format(question.rating), Fore.YELLOW)
                 continue
-            if arg == '-t':
+            if arg == 'set_hint':
+                print_color('Setting question hint to "{}"'.format(value), Fore.YELLOW)
+                question.hint = value
+                continue
+            if arg == 't':
                 print_color('Times: {}'.format(question.times), Fore.YELLOW)
                 continue
-            if arg == '-lr':
+            if arg == 'lr':
                 print_color('Last Run: {}'.format(question.last_run), Fore.YELLOW)
                 continue
-            if arg == '-r3':
-                print_color('Rated question at 3(Hard)'.format(question.hint), Fore.YELLOW)
-                rate(question, 3)
-                continue
-            if arg == '-r2':
-                print_color('Rated question at 2(Medium)'.format(question.hint), Fore.YELLOW)
-                rate(question, 2)
-                continue
-            if arg == '-r1':
-                print_color('Rated question at 1(easy)'.format(question.hint), Fore.YELLOW)
-                rate(question, 1)
+            if arg == 'set_rating':
+                try:
+                    value = int(value)
+                except ValueError:
+                    print_color('value must be integer')
+                    continue
+                old_rating = question.rating
+                question.rating = value if question.rating <= 100 else 100
+                print_color('rating changed: ({}->{})'.format(old_rating, question.rating), Fore.YELLOW)
                 continue
             print('Unknown argument {}'.format(arg))
             print(HELP)

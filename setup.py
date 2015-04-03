@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='grindy',
-    version='0.1',
+    version='0.2',
     packages=['grindy', 'grindy.rating', 'grindy.tools'],
     url='https://github.com/Granitas/Grindy',
     license='GPL',
@@ -13,7 +13,11 @@ setup(
     install_requires=[
         "colorama",
     ],
-    package_data={'': ['decks/*', 'LICENSE', 'README.md']},
+    package_data={'': ['decks/*.json', 'LICENSE', 'README.md']},
+    entry_points='''
+    [console_scripts]
+    grindy=grindy.argparser:main
+    ''',
     package_dir={'grindy': 'grindy'},
     include_pacakage_data=True,
 )

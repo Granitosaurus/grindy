@@ -20,6 +20,7 @@ class Grindy():
         self.deck = None
         self.stats = {'total_rating': 0,
                       'total_answers': 0,
+                      'highest_streak': 0,
                       'total_time': None,
                       'answers': Counter()}
         self.ignore_case = kwargs.get('ignore_case', True)
@@ -40,7 +41,8 @@ class Grindy():
                     question = self.weighted_choice()
                     print('Last Question left! You should take a break, increase difficulty or reset the deck :)')
                 elif questions_left == 0:
-                    print('Deck is completed!')
+                    print('Deck is completed! ratings drop over time so come back tomorrow! '
+                          'or reset the deck via "grindy --reset_deck <deck_name>"')
                     raise KeyboardInterrupt
                 else:
                     question = self.weighted_choice()
@@ -57,10 +59,12 @@ class Grindy():
         except (KeyboardInterrupt, EOFError):
             self.deck.save_deck()
             quit_text = 'STOPPED AND SAVING'
-            print_color('\n' + quit_text, back=Back.RED)
+            print()
+            print_color(quit_text, back=Back.RED)
 
             # Stats
             self.stats['total_time'] = (datetime.now() - start_time).seconds
+            self.stats['answers'] = dict(self.stats['answers'])
             self.calculate_stats(old_deck)
             print('stats:', repr(self.stats))
 
@@ -84,10 +88,14 @@ class Grindy():
 
         if match == 100:
             question.streak += 1
+            if question.streak > self.stats['highest_streak']:
+                self.stats['highest_streak'] = question.streak
 
         for rating, data in RATINGS.items():
             if data['match_func'](match):
                 rate(question, rating)
+                self.stats['answers'][rating] += 1
+
                 self.stats['answers'][rating] += 1
                 if reduced_rating != old_rating:
                     ratio_progress = '{}->{}->{}'.format(old_rating, reduced_rating, question.rating)
