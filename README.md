@@ -1,6 +1,10 @@
 # Grindy
 Grindy is a command line application for long term memory(LTM) training. Application uses user created decks with question & answers to question the user using question rating algorithms and other LTM methods.
 
+# Preview
+
+![preview](https://github.com/Granitas/grindy/raw/master/preview.gif)
+
 # Installation
     pip3 install GIT+https://github.com/Granitas/grindy
 Run grindy:  
