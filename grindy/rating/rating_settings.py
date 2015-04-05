@@ -1,5 +1,6 @@
 from colorama import Fore
 
+# Ratings
 RATINGS = {'correct':
                {'match_func': lambda x: x == 100,
                 'result_text': 'Correct!',
@@ -21,6 +22,8 @@ RATINGS = {'correct':
                 'value': 10,
                 'color': Fore.RED},
            }
+
+# Rating progression
 TIMES = {
     'NEW': {
         'count': 0,
@@ -39,6 +42,8 @@ TIMES = {
         'divider': 3
     },
 }
+
+# Rating streak progression
 STREAKS = [
     {
         'streak': 1,
@@ -53,6 +58,8 @@ STREAKS = [
         'multiplier': 2,
     },
 ]
+
+# Rating reduction
 MINUS_RATING_PER_HOUR = [(lambda x: x > 24,
                           2),     # threshold to hours to rating_per_hour
                          (lambda x: 24 > x > 12,

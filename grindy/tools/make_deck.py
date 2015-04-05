@@ -6,6 +6,10 @@ HINT_COVERAGE = 30
 
 
 def make_deck(save_location, name):
+    """CLI for deck creation
+    :param save_location: where the deck will be saved i.e. home/grindy/decks
+    :param name: name of the deck
+    """
     questions = []
     try:
         while True:
@@ -22,6 +26,10 @@ def make_deck(save_location, name):
 
 
 def parse_input(text):
+    """reads user input for arguments
+    :param text: user input.
+    :return dictionary of arguments.
+    """
     found_arguments = re.findall('\B-+([^\b|^\s]+)([^-]+)', text)
     arguments = {k: v.strip() for k, v in found_arguments}
     arguments['answer'] = re.split('|'.join(['-'+arg for arg, value in found_arguments]), text)[0]

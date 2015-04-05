@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='grindy',
-    version='0.2',
+    version='0.22',
     packages=['grindy', 'grindy.rating', 'grindy.tools'],
     url='https://github.com/Granitas/Grindy',
     license='GPL',

@@ -19,12 +19,14 @@ class Deck:
             self.read_questions()
 
     def read_questions(self):
+        """reads deck file and creates questions and stores them in self"""
         with open(self.loc, 'r') as deck_file:
             data = json.loads(deck_file.read())
             for question in data['questions']:
                 self.questions.append(Question(json_item=question))
 
     def save_deck(self):
+        """saves current deck object into a .json deck file"""
         with open(self.loc, 'w') as deck_file:
             data = {'questions': [q.__dict__() for q in self.questions]}
             data = json.dumps(data, indent=4, sort_keys=True)
@@ -42,6 +44,12 @@ class Deck:
 
 
 def download_deck(url, name, save_loc):
+    """
+    Downloads deck from external url (must point directly to .json file)
+    :param url: direct url to deck json file
+    :param name: name of the deck
+    :param save_loc: where to save the deck
+    """
     if not name.endswith('.json'):
         name += '.json'
     location = os.path.join(save_loc, name)
@@ -67,6 +75,10 @@ def download_deck(url, name, save_loc):
 
 
 def deck_repo(url):
+    """
+    Traverses git repo files for potential decks
+    :param url: url to a public github repository
+    """
     response = request.urlopen(url).read().decode()
     files = re.findall('a .+title=\".*?\>', response)
     files = [f for f in files if re.search('\.json', f)]
@@ -106,6 +118,7 @@ class Question:
         self._rating = value
 
     def reset(self):
+        """resets question progress"""
         self.rating = 0
         self.streak = 0
         self.times = 0

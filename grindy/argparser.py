@@ -113,6 +113,11 @@ class GrindyArgparser:
                 sys.exit('Deck "{}" not found, see --list for the decks available'.format(args.open))
 
     def find_decks(self, location=None):
+        """
+        Finds decks in provided location
+        :param location: path string
+        :return: list of tuples (name, path)
+        """
         if not location:
             location = self.location
         found_decks = []
@@ -126,8 +131,10 @@ class GrindyArgparser:
         return found_decks
     
     def initiate_grindy(self):
+        """
+        initiates grindy into provided --location or default home/grindy
+        """
         if not os.path.exists(self.location):
-            print('initiating grindy')
             if input("""Initiate grindy in location: "{}" ? (y/n) """.format(self.location)).lower() == 'y':
                 os.makedirs(self.location)
                 os.makedirs(os.path.join(self.location, 'decks'))
@@ -138,16 +145,22 @@ class GrindyArgparser:
             print('Grindy already exists at "{}"'.format(self.location))
     
     def list_decks(self):
+        """prints decks found in the grindy deck"""
         for deck, location in self.decks:
             print('- {}'.format(deck))
 
     def get_deck_location(self, deck_name):
+        """retrieves location of a deck"""
         for deck, location in self.decks:
             if deck_name.lower() == deck.lower():
                 return location
 
     @staticmethod
     def remove_deck(deck_location, name):
+        """Deletes a deck
+        :param deck_location: location of grindy decks folder
+        :param name: name of the deck
+        """
         file_name = name
         if not file_name.endswith('.json'):
             file_name += '.json'
@@ -160,6 +173,11 @@ class GrindyArgparser:
 
     @staticmethod
     def reset_deck(deck_location, name):
+        """
+        Resets deck progress
+        :param deck_location: location to grindy decks folder
+        :param name: name of the deck
+        """
         file_name = name
         if not file_name.endswith('.json'):
             file_name += '.json'
@@ -176,4 +194,5 @@ class GrindyArgparser:
 
 
 def main():
+    """runs the whole CLI and serves as an entry program from 'grindy' command"""
     GrindyArgparser()

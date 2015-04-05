@@ -16,21 +16,41 @@ HELP = '''commands:
 
 
 def find_arguments(text):
+    """Finds arguments in text
+    :param text: text where to look for arguments
+    :return a list of tuples of (argument, value)
+    """
     return re.findall('\B-+([^\b|^\s]+)(?:\s|)([^-]+|-\d+|)', text)
 
 
 def generate_hint(answer):
-        obscured = [char for char in re.sub('\w', '*', answer)]
-        uncover_amount = round(HINT_COVERAGE * len(answer) / 100)
-        for i in range(uncover_amount):
-            uncover = random.choice(range(len(answer)))
-            if obscured[uncover] != '*':
-                continue
-            obscured[uncover] = answer[uncover]
-        return ''.join(obscured)
+    """Generates hint based on HINT_COVERATE rating setting,
+    i.e. HINT_COVERAGE 30 will unveil 30% random letters of the word"""
+    obscured = [char for char in re.sub('\w', '*', answer)]
+    uncover_amount = round(HINT_COVERAGE * len(answer) / 100)
+    for i in range(uncover_amount):
+        uncover = random.choice(range(len(answer)))
+        if obscured[uncover] != '*':
+            continue
+        obscured[uncover] = answer[uncover]
+    return ''.join(obscured)
 
 
 def sinput(text, question, grindy):
+    """Smart input for question answers which reads the answer for arguments such as --hint
+    Currently available arguments:
+    :arg quit: quits the program
+    :arg h: prints a hint
+    :arg r: prints current rating
+    :arg set_hint <value>: changes the hint of the question
+    :arg t: prints how many times the question was answered
+    :arg lr: prints when was the Last Run of the question
+    :arg set_rating <value>: sets rating to provided value
+
+    :param text: answer input text.
+    :param question: question object.
+    :param grindy: grindy program object.
+    """
     value = input(text)
     if '-quit' in value.lower():
         raise KeyboardInterrupt

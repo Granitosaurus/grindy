@@ -17,7 +17,11 @@ def reduce_rating_by_time(current_rating, gap_hours):
 
 
 def rate(question, rating, value=None):
-    """rates question"""
+    """
+    rates question
+    :param question: question object to rate
+    :param rating: rating value which must comply with INPUT_RATINGS from rating_settings
+    """
     rating = str(rating)
     if not value:
         if rating not in RATINGS and rating not in INPUT_RATINGS:

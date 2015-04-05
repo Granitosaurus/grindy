@@ -5,3 +5,6 @@ Added proper logging (just support not everything is logged yet)
 Added -dl which downloads deck directly from json url to file
 Added --repo-list which checks repos for decks
 Added --repo-download which downloads a deck from repo
+
+0.22
+Added a lot of comments
