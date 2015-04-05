@@ -1,0 +1,7 @@
+0.21
+Adjusted json formatting to indent=4 and sort_keys=True
+Added settings.py file for dev settings
+Added proper logging (just support not everything is logged yet)
+Added -dl which downloads deck directly from json url to file
+Added --repo-list which checks repos for decks
+Added --repo-download which downloads a deck from repo

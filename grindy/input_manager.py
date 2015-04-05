@@ -3,7 +3,7 @@ import re
 
 from colorama import Fore
 
-from grindy.rating.ratting_settings import HINT_COVERAGE
+from grindy.rating.rating_settings import HINT_COVERAGE
 from grindy.utils import print_color
 
 

@@ -10,7 +10,7 @@ from grindy.deck import Deck
 # Output helpers
 from grindy.input_manager import sinput
 from grindy.rating.rating_manager import rate, reduce_rating_by_time
-from grindy.rating.ratting_settings import RATINGS
+from grindy.rating.rating_settings import RATINGS
 from grindy.utils import print_color
 
 

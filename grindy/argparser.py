@@ -1,10 +1,12 @@
+import logging
 import os
 import argparse
 import sys
-from colorama import Fore, Back
+from colorama import Back
 import shutil
-from grindy.deck import Deck
+from grindy.deck import Deck, download_deck, deck_repo
 from grindy.grindy import Grindy
+from grindy.settings import repo_urls
 from grindy.tools.make_deck import make_deck
 from grindy.utils import LINE, print_color
 
@@ -27,12 +29,16 @@ class GrindyArgparser:
         """
         self.parser.add_argument('-o', '--open', help='open deck <deckname>[.json]', metavar='DECK')
         self.parser.add_argument('-l', '--list', help='list decks', action='store_true')
+        self.parser.add_argument('-dl', '--download', help='download deck from direct url',
+                                 metavar='NAME URL', nargs='*')
+        self.parser.add_argument('-rl', '--repo_list', help='list decks in the deck repos', action='store_true')
+        self.parser.add_argument('-rdl', '--repo_download', help='Download a deck from repo', metavar='DECK')
+        self.parser.add_argument('-md', '--make_deck', help='make a deck', metavar='NAME')
         self.parser.add_argument('-del', help='delete deck', metavar='DECK')
         self.parser.add_argument('--reset_deck', help='reset deck of any progress', metavar='DECK')
         self.parser.add_argument('-init', help='setup grindy in provided location '
                                                '(no location uses current working directory)', action='store_true')
         self.parser.add_argument('-loc', '--deck_location', help='decks location', action='store_true')
-        self.parser.add_argument('-md', '--make_deck', help='make a deck', metavar='NAME')
         self.parser.add_argument('-cs', '--case_sensitive', help='set case sentivity on for q&a', action='store_true',
                                  default=False)
         self.parser.add_argument('-nah', '--no_auto_hints', help='disable auto hints', action='store_true',
@@ -41,14 +47,43 @@ class GrindyArgparser:
         args = self.parser.parse_args()
         if len(sys.argv) <= 1:
             self.parser.print_usage()
+            return
 
         if args.deck_location:
             self.location = args.deck_location
         else:
             self.location = self.default_location
         self.deck_location = os.path.join(self.location, 'decks')
+
+        if args.download:
+            name = args.download[0]
+            url = args.download[1]
+            download_deck(url, name, self.deck_location)
+
+        if args.repo_download:
+            decks = []
+            for url in repo_urls:
+                decks.extend(deck_repo(url))
+            for index, deck in enumerate(decks):
+                if args.repo_download == deck[0] or str(args.repo_download) == str(index):
+                    download_deck(deck[1], deck[0], self.deck_location)
+                    return
+                print('No decks of name or #id of "{}" found'.format(args.repo_download))
+
+        if args.repo_list:
+            decks = []
+            for url in repo_urls:
+                decks.extend(deck_repo(url))
+            row = lambda i, name, url: ('|' + '| '.join([i.ljust(5), name.ljust(45), url.ljust(25)])) + '|'
+            print('_'*80)
+            print(row('index', 'Name', 'Url'))
+            print('_'*80)
+            for index, deck in enumerate(decks):
+                print(row(str(index), deck[0], deck[1]))
+
         if args.init:
             self.initiate_grindy()
+            return
         self.decks = self.find_decks()
 
         if args.list:

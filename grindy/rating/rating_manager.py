@@ -16,15 +16,16 @@ def reduce_rating_by_time(current_rating, gap_hours):
         return reduced_rating
 
 
-def rate(question, rating):
+def rate(question, rating, value=None):
     """rates question"""
     rating = str(rating)
-    if rating not in RATINGS and rating not in INPUT_RATINGS:
-        raise NotImplementedError('rating {} not found in RATINGS dict'.format(rating))
-    try:
-        value = RATINGS[rating]['value']
-    except KeyError:
-        value = INPUT_RATINGS[rating]['value']
+    if not value:
+        if rating not in RATINGS and rating not in INPUT_RATINGS:
+            raise NotImplementedError('rating {} not found in RATINGS dict'.format(rating))
+        try:
+            value = RATINGS[rating]['value']
+        except KeyError:
+            value = INPUT_RATINGS[rating]['value']
 
     def get_highest_time(times):
         highest = TIMES['NEW']

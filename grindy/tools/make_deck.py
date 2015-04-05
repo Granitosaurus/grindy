@@ -5,7 +5,7 @@ from grindy import decks
 HINT_COVERAGE = 30
 
 
-def make_deck(name):
+def make_deck(save_location, name):
     questions = []
     try:
         while True:
@@ -15,8 +15,8 @@ def make_deck(name):
             questions.append(Question(kwargs))
     except (KeyboardInterrupt, EOFError):
         name = name + '.json' if not name.endswith('.json') else name
-        save_location = os.path.join(os.path.dirname(decks.__file__), name)
-        deck = Deck(save_location, questions)
+        save_path = os.path.join(save_location, name)
+        deck = Deck(save_path, questions)
         print('deck {} has been saved!'.format(name.replace('.json', '')))
         deck.save_deck()
 

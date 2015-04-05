@@ -1,6 +1,5 @@
 from colorama import Fore
 
-INPUT_RATINGS = {'1': 90, '2': 50, '3': 10}
 RATINGS = {'correct':
                {'match_func': lambda x: x == 100,
                 'result_text': 'Correct!',

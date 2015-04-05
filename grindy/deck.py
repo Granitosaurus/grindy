@@ -1,6 +1,10 @@
 from datetime import datetime
 import json
 import os
+from urllib import request
+from logging import log, ERROR
+import re
+from urllib.parse import urljoin
 
 
 class Deck:
@@ -23,7 +27,7 @@ class Deck:
     def save_deck(self):
         with open(self.loc, 'w') as deck_file:
             data = {'questions': [q.__dict__() for q in self.questions]}
-            data = json.dumps(data)
+            data = json.dumps(data, indent=4, sort_keys=True)
             deck_file.write(data)
 
     def __iter__(self):
@@ -35,6 +39,42 @@ class Deck:
 
     def __len__(self):
         return len(self.questions)
+
+
+def download_deck(url, name, save_loc):
+    if not name.endswith('.json'):
+        name += '.json'
+    location = os.path.join(save_loc, name)
+    if os.path.isfile(location):
+            prompt = input('Deck "{}" already exists in "{}"(y/n)'.format(name, location))
+            if True if 'n' in prompt.lower() else False:
+                return
+    try:
+        print('Downloading deck from "{}"'.format(url))
+        data = request.urlopen(url).read().decode()
+    except ValueError:
+        log(ERROR, 'url "{}" is not valid'.format(url))
+        return
+    try:
+        print('Validating deck')
+        json_data = json.loads(data)
+    except ValueError:
+        log(ERROR, 'Failed to validate downloaded deck, aborting.')
+        return
+    with open(os.path.join(save_loc, name), 'w') as file:
+        file.write(json.dumps(json_data, indent=4, sort_keys=True))
+        print('File was downloaded and saved to "{}"'.format(os.path.join(save_loc, name)))
+
+
+def deck_repo(url):
+    response = request.urlopen(url).read().decode()
+    files = re.findall('a .+title=\".*?\>', response)
+    files = [f for f in files if re.search('\.json', f)]
+    for i, file in enumerate(files):
+        href = urljoin('http://github.com', ''.join(re.findall('href="(.*?)"', file)))
+        name = ''.join(re.findall('title="(.*?)"', file))
+        files[i] = (name.replace('.json', ''), href.replace('blob', 'raw'))
+    return files
 
 
 class Question:
