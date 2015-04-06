@@ -95,8 +95,6 @@ class Grindy():
             if data['match_func'](match):
                 rate(question, rating)
                 self.stats['answers'][rating] += 1
-
-                self.stats['answers'][rating] += 1
                 if reduced_rating != old_rating:
                     ratio_progress = '{}->{}->{}'.format(old_rating, reduced_rating, question.rating)
                 else:
