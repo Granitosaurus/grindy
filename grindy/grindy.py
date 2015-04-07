@@ -4,11 +4,11 @@ from datetime import datetime
 import time
 import random
 from colorama import Back
+from grindy import input_manager
 
 from grindy.deck import Deck
 
 # Output helpers
-from grindy.input_manager import sinput
 from grindy.rating.rating_manager import rate, reduce_rating_by_time
 from grindy.rating.rating_settings import RATINGS
 from grindy.utils import print_color
@@ -19,12 +19,14 @@ class Grindy():
         self.deck_loc = deck_loc or "decks/alphabet.json"
         self.deck = None
         self.stats = {'total_rating': 0,
-                      'total_answers': 0,
                       'highest_streak': 0,
                       'total_time': None,
                       'answers': Counter()}
         self.ignore_case = kwargs.get('ignore_case', True)
         self.auto_hints = kwargs.get('auto_hints', True)
+
+        # Stats
+        self.streak = 0
 
     def run_deck(self):
         self.open_deck(self.deck_loc)
@@ -51,7 +53,9 @@ class Grindy():
                             continue
                 # Actual interaction
                 print_color('Q: {}'.format(question.question), back=Back.BLUE)
-                answer = sinput('A: ', question=question, grindy=self)
+                answer = input_manager.sinput('A: ', question=question, grindy=self)
+                if answer == input_manager.SKIP:  # this means question should be skipped, e.g. "was deleted"
+                    continue
                 self.check_answer(answer, question)
 
                 previous_question = question
@@ -88,13 +92,18 @@ class Grindy():
 
         if match == 100:
             question.streak += 1
-            if question.streak > self.stats['highest_streak']:
-                self.stats['highest_streak'] = question.streak
+            self.streak += 1
+            if self.streak > self.stats['highest_streak']:
+                self.stats['highest_streak'] = self.streak
+        else:
+            self.streak = 0  # reset streak
 
         for rating, data in RATINGS.items():
-            if data['match_func'](match):
+            match_func = data['match_func']
+            if match_func(match):
                 rate(question, rating)
                 self.stats['answers'][rating] += 1
+                self.stats['answers']['total'] += 1
                 if reduced_rating != old_rating:
                     ratio_progress = '{}->{}->{}'.format(old_rating, reduced_rating, question.rating)
                 else:
@@ -134,7 +143,7 @@ class Grindy():
         new_deck = self.deck
         for index in range(len(new_deck)):
             self.stats['total_rating'] += new_deck[index].rating - old_deck[index].rating
-            self.stats['total_answers'] += new_deck[index].times - old_deck[index].times
+
 
         # Total time
         if self.stats['total_time'] > 3600:

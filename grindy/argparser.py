@@ -34,6 +34,7 @@ class GrindyArgparser:
         self.parser.add_argument('-rl', '--repo_list', help='list decks in the deck repos', action='store_true')
         self.parser.add_argument('-rdl', '--repo_download', help='Download a deck from repo', metavar='DECK')
         self.parser.add_argument('-md', '--make_deck', help='make a deck', metavar='NAME')
+        self.parser.add_argument('-ud', '--update_deck', help='update a deck', metavar='NAME')
         self.parser.add_argument('-del', help='delete deck', metavar='DECK')
         self.parser.add_argument('--reset_deck', help='reset deck of any progress', metavar='DECK')
         self.parser.add_argument('-init', help='setup grindy in provided location '
@@ -99,6 +100,12 @@ class GrindyArgparser:
 
         if args.make_deck:
             make_deck(self.deck_location, args.make_deck)
+        if args.update_deck:
+            args.update_deck = args.update_deck.replace('.json', '')
+            if not self.get_deck_location(args.update_deck):
+                logging.error('Deck "{}" not found! see grindy --list'.format(args.update_deck))
+            print(self.deck_location, args.update_deck)
+            make_deck(self.deck_location, args.update_deck, update=True)
         if args.open:
             args.open = args.open.replace('.json', '')
             deck_location = self.get_deck_location(args.open)

@@ -1,3 +1,17 @@
+0.27
+Added --update_deck|-ud DECK which updates deck with new questions
+Fixed streak stat calculating question streak rather than session streak
+Added smart input arguments:
+    set_question - sets question question
+    set_answer - sets question answer
+    delete - deletes question
+    skip - skips question
+Reformatted smart input arguments to have short and full arguments, i.e. "skip" and "s"
+Merged Total_answers stat to answers dict
+
+0.22
+Added a lot of comments
+
 0.21
 Adjusted json formatting to indent=4 and sort_keys=True
 Added settings.py file for dev settings
@@ -6,5 +20,3 @@ Added -dl which downloads deck directly from json url to file
 Added --repo-list which checks repos for decks
 Added --repo-download which downloads a deck from repo
 
-0.22
-Added a lot of comments

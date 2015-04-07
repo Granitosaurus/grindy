@@ -5,12 +5,16 @@ from grindy import decks
 HINT_COVERAGE = 30
 
 
-def make_deck(save_location, name):
-    """CLI for deck creation
+def make_deck(save_location, name, update=False):
+    """CLI for deck creation and update
     :param save_location: where the deck will be saved i.e. home/grindy/decks
     :param name: name of the deck
     """
     questions = []
+    name = name + '.json' if not name.endswith('.json') else name
+    save_path = os.path.join(save_location, name)
+    if update:
+        deck = Deck(save_path)
     try:
         while True:
             question = input('Q: ')
@@ -18,11 +22,13 @@ def make_deck(save_location, name):
             kwargs['question'] = question
             questions.append(Question(kwargs))
     except (KeyboardInterrupt, EOFError):
-        name = name + '.json' if not name.endswith('.json') else name
-        save_path = os.path.join(save_location, name)
-        deck = Deck(save_path, questions)
-        print('deck {} has been saved!'.format(name.replace('.json', '')))
+        if update:
+            deck.questions += questions
+        else:
+            deck = Deck(save_path, questions)
         deck.save_deck()
+        print('deck {} has been saved!'.format(name.replace('.json', '')))
+
 
 
 def parse_input(text):

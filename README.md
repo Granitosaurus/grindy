@@ -46,14 +46,18 @@ they all increase the question rating, when question reaches 100% it is consider
 
 It is possible to use various arguments when answering the questions
 Currently available arguments:  
-* `-quit`: quits the program  
-* `-h`: prints a hint  
-* `-r`: prints current rating  
-* `-set_hint <value>`: changes the hint of the question  
-* `-t`: prints how many times the question was answered  
-* `-lr`: prints when was the Last Run of the question  
-* `-set_rating <value>`: sets rating to provided value  
 
+    * quit: quits the program  
+    * skip|s: skips question  
+    * hint|h: prints a hint  
+    * rating|r: prints current rating  
+    * times|t: prints how many times the question was answered  
+    * last_run|lr: prints when was the Last Run of the question  
+    * delete|del: deletes question  
+    * set_rating|setr <value>: sets rating to provided value  
+    * set_question|setq <value>: sets question to provided value  
+    * set_answer|seta <value>: sets answer to provided value  
+    * set_hint|seth <value>: changes the hint of the question  
 e.g.:  
 
     Q: creator of Python?                                                           
