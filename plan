@@ -1,5 +1,8 @@
 TODO [LOW] gui deck maker
-TODO [HIGH] Add to deck feature
+TODO [LOW] multiple answer feature
 
-TODO merge Total_answers stat to answers dict
-TODO rework streak to be deck wide rather than question wide, the way it works right now it calculates streak per question rather than per deck.
+TODO [MED] merge Total_answers stat to answers dict
+TODO [MED] Look into partial reset
+
+TODO [HIGH] rework streak to be deck wide rather than question wide, the way it works right now it calculates streak per question rather than per deck.
+TODO [HIGH] Add to deck feature
