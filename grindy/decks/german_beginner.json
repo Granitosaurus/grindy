@@ -1,0 +1,1903 @@
+{
+    "questions": [
+        {
+            "answer": "Ja",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Yes",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Nein",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "No",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Danke",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Thank you",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Vielen Dank",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Thank you very much",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Bitte sch\u00f6n",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "You're welcome",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Bitte",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Please",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Entschuldigen Sie",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Excuse me",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Guten Tag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Hello",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Auf Wiedersehen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Goodbye",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "tsch\u00fc\u00df",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "So long",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Guten Morgen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Good morning",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Guten Tag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Good afternoon",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Guten Abend",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Good evening",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Gute Nacht",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Good night",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Ich verstehe nicht",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "I do not understand",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wie hei\u00dft das auf [Deutsch]?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "How do you say this in [English]?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sprechen Sie ...",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Do you speak ...",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Englisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "English",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Franz\u00f6sisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "French",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Deutsch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "German",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Spanisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Spanish",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Chinesisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Chinese",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Ich",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "I",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wir",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "We",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Du",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "You (singular, familiar)",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sie",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "You (singular, formal)",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "ihr",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "You (plural)",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "sie",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "They",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wie hei\u00dfen Sie?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "What is your name?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sehr erfreut. Freut mich (, Sie kennen zu lernen.)",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Nice to meet you.",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wie geht's?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "How are you?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Gut",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Good",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Schlecht",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Bad",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Es geht.",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "So so",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Frau",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Wife",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Mann",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Husband",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Tochter",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Daughter",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Sohn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Son",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Mutter",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Mother",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Vater",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Father",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Freund (m) Freundin (f)",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Friend",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wo ist die Toilette?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Where is the bathroom? Where is the toilet?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Null",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "zero",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Eins (ein,eine)",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "one",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Zwei",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "two",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Drei",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "three",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Vier",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "four",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "F\u00fcnf",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "five",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sechs",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "six",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sieben",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "seven",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Acht",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "eight",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Neun",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "nine",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Zehn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "ten",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Elf",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "eleven",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Zw\u00f6lf",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "twelve",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Dreizehn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "thirteen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Vierzehn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "fourteen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "F\u00fcnfzehn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "fifteen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sechzehn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "sixteen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Siebzehn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "seventeen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Achtzehn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "eighteen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Neunzehn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "nineteen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Zwanzig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "twenty",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Einundzwanzig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "twenty one",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Drei\u00dfig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "thirty",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Vierzig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "forty",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "F\u00fcnfzig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "fifty",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sechzig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "sixty",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Siebzig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "seventy",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Achtzig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "eighty",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Neunzig",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "ninety",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Hundert",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "one hundred",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Tausend",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "one thousand",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "(Eine) Million",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "one million",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wieviel kostet das?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "How much does this cost?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Was ist das?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "What is this?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Ich nehme es.",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "I'll buy it.",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Ich m\u00f6chte ... kaufen.",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "I would like to buy ...",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Haben Sie ...",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Do you have ...",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Akzeptieren Sie Kreditkarten? Nehmen Sie Kreditkarten?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Do you accept credit cards?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Auf, offen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Open",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "geschlossen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Closed",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Postkarte",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Postcard",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Briefmarke, Briefmarken",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Stamps",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wenig, ein bi\u00dfchen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "A little",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sehr viel",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "A lot",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Alles",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "All",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Fr\u00fchst\u00fcck",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Breakfast",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Mittagessen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Lunch",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Abendessen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Dinner",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "vegetarisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Vegetarian",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "koscher",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Kosher",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Prost!",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Cheers!",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Die Rechnung, bitte. Zahlen, bitte.",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Please bring the bill.",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Brot",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Bread",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Getr\u00e4nk",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Beverage",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Kaffee",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Coffee",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Tee",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Tea",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Saft",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Juice",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Wasser",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Water",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Bier",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Beer",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Wein",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Wine",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Salz",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Salt",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Pfeffer",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Pepper",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Fleisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Meat",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Rindfleisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Beef",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Schweinefleisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Pork",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Fisch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Fish",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Gefl\u00fcgel",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Poultry",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Gem\u00fcse",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Vegetable",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Frucht, das Obst",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Fruit",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Kartoffel",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Potato",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Salat",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Salad",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Nachtisch, das Dessert",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Dessert",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Speiseeis, das Eis, die Glace (schweiz)",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Ice cream",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wo ist ...?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Where is ...?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wieviel kostet die Fahrkarte?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "How much is the fare?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Fahrkarte",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Ticket",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Eine Fahrkarte nach ...,",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "One ticket to ..., please.",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wohin gehen Sie?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Where are you going?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wo wohnen Sie?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Where do you live?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Bahn, der Zug",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Train",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Bus",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Bus",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die U-Bahn",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Subway, Underground",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Flughafen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Airport",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Bahnhof",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Train station",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Busbahnhof",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Bus station",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der U-Bahnhof",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Subway station, Underground station",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Abfahrt",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Departure",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Ankunft",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Arrival",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Autovermietung",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Car rental agency",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Parken",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Parking",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Hotel",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Hotel",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Zimmer",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Room",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Reservierung, Reserviert",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Reservation",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Haben Sie noch ein Zimmer frei?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Are there any vacancies for tonight?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Ausgebucht",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "No vacancies",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Reisepa\u00df",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Passport",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "links",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Left",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "rechts",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Right",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "geradeaus",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Straight",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "hinauf",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Up",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "hinunter",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Down",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "weit",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Far",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "nahe",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Near",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "lang",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Long",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "kurz",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Short",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Karte, die Landkarte",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Map",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Fremdenverkehrsbuero, die Auskunftsstelle, die Fremdenauskunftei",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Tourist Information",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Post",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Post office",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Museum",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Museum",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Bank",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Bank",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Polizeiwache, Polizeirevier",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Police station",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Krankenhaus",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Hospital",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Apotheke",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Pharmacy, Chemists",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Gesch\u00e4ft",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Store, Shop",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Gastst\u00e4tte, das Restaurant",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Restaurant",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Schule",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "School",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Kirche",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Church",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das WC, die Toilette",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Restrooms",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Stra\u00dfe",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Street",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Platz",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Square",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Berg",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Mountain",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der H\u00fcgel",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Hill",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Tal",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Valley",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Ozean",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Ocean",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der See",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Lake",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Flu\u00df",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "River",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Schwimmbad",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Swimming Pool",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Turm",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Tower",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Br\u00fccke",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Bridge",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Wie sp\u00e4t ist es?",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "What time is it?",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "7.13, dreizehn nach sieben",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "7:13, Seven thirteen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "3.15, drei Uhr f\u00fcnfzehn, f\u00fcnfzehn nach drei",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "3:15, Three fifteen",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "3.15, viertel nach drei, viertel vier (Southern Germany)",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "3:15, A quarter past three",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "11.30, elf Uhr drei\u00dfig, Drei\u00dfig nach elf",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "11:30, Eleven thirty",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "11.30, halb zw\u00f6lf",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "11:30, Half past eleven",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "1.45, ein Uhr f\u00fcnfundvierzig, f\u00fcnfundvierzig nach eins",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "1:45, One forty-five",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "1.45, viertel vor zwei, dreiviertel zwei",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "1:45, A quarter to two",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Tag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Day",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "die Woche",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Week",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Monat",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Month",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "das Jahr",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Year",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Montag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Monday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Dienstag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Tuesday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Mittwoch",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Wednesday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Donnerstag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Thursday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Freitag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Friday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Samstag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Saturday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Sonntag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Sunday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Januar",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "January",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Februar",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "February",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "M\u00e4rz",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "March",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "April",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "April",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Mai",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "May",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Juni",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "June",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Juli",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "July",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "August",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "August",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "September",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "September",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Oktober",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "October",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "November",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "November",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Dezember",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "December",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Fr\u00fchling",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Spring",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Sommer",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Summer",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Herbst",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Fall, Autumn",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Winter",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Winter",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "heute",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Today",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "gestern",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Yesterday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "morgen",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Tomorrow",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "der Geburtstag",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Birthday",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        },
+        {
+            "answer": "Alles Gute zum Geburtstag!",
+            "hint": "",
+            "last_run": "2015-04-09 09:25:16",
+            "question": "Happy Birthday!",
+            "rating": "0",
+            "streak": "0",
+            "times": "0"
+        }
+    ]
+}

@@ -4,4 +4,5 @@ TODO [LOW] multiple answer feature
 TODO [MED] Look into partial reset
 TODO [MED] answers that ignore non-acsii matching i.e. "suo" would be considered correct for answer that is šuo see unidecode
 
+TODO [HIGH] deck meta settings
 TODO [HIGH] proper example deck, maybe something with languages and new preview

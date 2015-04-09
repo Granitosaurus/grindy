@@ -29,6 +29,7 @@ class GrindyArgparser:
         """
         self.parser.add_argument('-o', '--open', help='open deck <deckname>[.json]', metavar='DECK')
         self.parser.add_argument('-l', '--list', help='list decks', action='store_true')
+        self.parser.add_argument('-rev', '--reverse', help='reverse questions and answers', action='store_true')
         self.parser.add_argument('-dl', '--download', help='download deck from direct url',
                                  metavar='NAME URL', nargs='*')
         self.parser.add_argument('-rl', '--repo_list', help='list decks in the deck repos', action='store_true')
@@ -112,7 +113,9 @@ class GrindyArgparser:
             if deck_location:
                 print_color('Opening deck "{}":'.format(args.open), back=Back.BLUE)
                 print_color('_'*80, back=Back.BLUE)
+                print(args.reverse)
                 grindy = Grindy(deck_loc=deck_location,
+                                reverse=args.reverse,
                                 auto_hints=not args.no_auto_hints,
                                 ignore_case=not args.case_sensitive)
                 grindy.run_deck()

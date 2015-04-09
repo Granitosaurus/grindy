@@ -1,3 +1,8 @@
+0.3
+Added default deck "german_beginner"
+Added -rev|--reverse which reverses questions and answers, good for language decks :)
+Empty answer will act like skip
+
 0.27
 Added --update_deck|-ud DECK which updates deck with new questions
 Fixed streak stat calculating question streak rather than session streak

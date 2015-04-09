@@ -3,7 +3,7 @@ from difflib import SequenceMatcher
 from datetime import datetime
 import time
 import random
-from colorama import Back
+from colorama import Back, Fore
 from grindy import input_manager
 
 from grindy.deck import Deck
@@ -15,7 +15,8 @@ from grindy.utils import print_color
 
 
 class Grindy():
-    def __init__(self, deck_loc=None, **kwargs):
+    def __init__(self, deck_loc=None, reverse=False, **kwargs):
+        self.reverse = reverse
         self.deck_loc = deck_loc or "decks/alphabet.json"
         self.deck = None
         self.stats = {'total_rating': 0,
@@ -54,7 +55,10 @@ class Grindy():
                 # Actual interaction
                 print_color('Q: {}'.format(question.question), back=Back.BLUE)
                 answer = input_manager.sinput('A: ', question=question, grindy=self)
-                if answer == input_manager.SKIP:  # this means question should be skipped, e.g. "was deleted"
+                if answer == input_manager.SKIP:  # this means question should be skipped
+                    continue
+                if not answer:
+                    print_color('Skipping question', Fore.RED)
                     continue
                 self.check_answer(answer, question)
 
@@ -121,7 +125,7 @@ class Grindy():
         """
         if not deck_location.endswith('.json'):
             deck_location += '.json'
-        self.deck = Deck(deck_location)
+        self.deck = Deck(deck_location, reverse=self.reverse)
 
     def weighted_choice(self):
         total = sum(100 - q.rating for q in self.deck.questions)
