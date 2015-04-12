@@ -1,3 +1,8 @@
+0.4
+Added flashcard deck support (open decks with -of|--open_flashcard) instead
+Fixed completed deck reduction bug
+Clean up and docs update
+
 0.3
 Added default deck "german_beginner"
 Added -rev|--reverse which reverses questions and answers, good for language decks :)

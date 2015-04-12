@@ -3,7 +3,7 @@ import re
 
 from colorama import Fore
 
-from grindy.rating.rating_settings import HINT_COVERAGE
+from grindy.rating.rating_settings import HINT_COVERAGE, FRATINGS
 from grindy.utils import print_color
 
 
@@ -38,7 +38,7 @@ def generate_hint(answer):
     return ''.join(obscured)
 
 
-def sinput(text, question, grindy):
+def sinput(text, question, grindy, flashcards=False):
     """Smart input for question answers which reads the answer for arguments such as --hint
     Currently available arguments:
     :arg quit: quits the program
@@ -58,62 +58,70 @@ def sinput(text, question, grindy):
     :param grindy: grindy program object.
     """
     value = input(text)
+    if not value:
+        return SKIP
     if '-quit' in value.lower():
         raise KeyboardInterrupt
 
-    if question:
-        found_arguments = find_arguments(value)
-        for arg, value in found_arguments:
-            value = value.strip()
-            if arg in ['hint', 'h']:
-                print_color('Hint: {}'.format(question.hint
-                                              or generate_hint(question.answer)
-                                              if grindy.auto_hints else ''), Fore.YELLOW)
+    found_arguments = find_arguments(value)
+    for arg, value in found_arguments:
+        value = value.strip()
+        if arg in ['hint', 'h']:
+            print_color('Hint: {}'.format(question.hint
+                                          or generate_hint(question.answer)
+                                          if grindy.auto_hints else ''), Fore.YELLOW)
+            continue
+        if arg in ['rating', 'r']:
+            print_color('Rating: {}'.format(question.rating), Fore.YELLOW)
+            continue
+        if arg in ['skip', 's']:
+            print_color('Skipping question', Fore.RED)
+            return SKIP
+        if arg in ['times', 't']:
+            print_color('Times: {}'.format(question.times), Fore.YELLOW)
+            continue
+        if arg in ['last_run', 'l']:
+            print_color('Last Run: {}'.format(question.last_run), Fore.YELLOW)
+            continue
+        if arg in ['delete', 'del']:
+            if 'y' not in input('Are you sure you want to delete this question? (y/n)').lower():
                 continue
-            if arg in ['rating', 'r']:
-                print_color('Rating: {}'.format(question.rating), Fore.YELLOW)
+            grindy.deck.questions.remove(question)
+            print_color('question "{}" deleted'.format(question.question), Fore.RED)
+            return SKIP  # return 0 to skip question
+        if arg in ['set_hint', 'seth']:
+            print_color('Setting question hint to "{}"'.format(value), Fore.YELLOW)
+            question.hint = value
+            continue
+        if arg in ['set_rating', 'setr']:
+            try:
+                value = int(value)
+            except ValueError:
+                print_color('value must be integer')
                 continue
-            if arg in ['skip', 's']:
-                print_color('Skipping question', Fore.RED)
-                return SKIP
-            if arg in ['times', 't']:
-                print_color('Times: {}'.format(question.times), Fore.YELLOW)
-                continue
-            if arg in ['last_run', 'l']:
-                print_color('Last Run: {}'.format(question.last_run), Fore.YELLOW)
-                continue
-            if arg in ['delete', 'del']:
-                if 'y' not in input('Are you sure you want to delete this question? (y/n)').lower():
-                    continue
-                grindy.deck.questions.remove(question)
-                print_color('question "{}" deleted'.format(question.question), Fore.RED)
-                return SKIP  # return 0 to skip question
-            if arg in ['set_hint', 'seth']:
-                print_color('Setting question hint to "{}"'.format(value), Fore.YELLOW)
-                question.hint = value
-                continue
-            if arg in ['set_rating', 'setr']:
-                try:
-                    value = int(value)
-                except ValueError:
-                    print_color('value must be integer')
-                    continue
-                old_rating = question.rating
-                question.rating = value if question.rating <= 100 else 100
-                print_color('rating changed: ({}->{})'.format(old_rating, question.rating), Fore.YELLOW)
-                continue
-            if arg in ['set_question', 'setq']:
-                old_question = question.question
-                question.question = value
-                print_color('question changed: ("{}"->"{}")'.format(old_question, question.question), Fore.YELLOW)
-                continue
-            if arg in ['set_answer', 'seta']:
-                old_answer = question.answer
-                question.answer = value
-                print_color('answer changed: ("{}"->"{}")'.format(old_answer, question.answer), Fore.YELLOW)
-                return 0
-            print('Unknown argument {}'.format(arg))
-            print(HELP)
-        if found_arguments:
-            return sinput(text, question, grindy)
+            old_rating = question.rating
+            question.rating = value if question.rating <= 100 else 100
+            print_color('rating changed: ({}->{})'.format(old_rating, question.rating), Fore.YELLOW)
+            continue
+        if arg in ['set_question', 'setq']:
+            old_question = question.question
+            question.question = value
+            print_color('question changed: ("{}"->"{}")'.format(old_question, question.question), Fore.YELLOW)
+            continue
+        if arg in ['set_answer', 'seta']:
+            old_answer = question.answer
+            question.answer = value
+            print_color('answer changed: ("{}"->"{}")'.format(old_answer, question.answer), Fore.YELLOW)
+            return 0
+        print('Unknown argument {}'.format(arg))
+        print(HELP)
+
+    if found_arguments:
+        return sinput(text, question, grindy, flashcards)
+    if flashcards:
+        try:
+            return int(value)
+        except ValueError:
+            print("Provided value must be integer")
+            return sinput(text, question, grindy, flashcards)
     return value

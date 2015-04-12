@@ -1,5 +1,7 @@
-TODO [LOW] gui deck maker
-TODO [LOW] multiple answer feature
+TODO [undecided] gui deck maker
+TODO [undecided] multiple answer feature
+
+TODO [LOW] Add default color and color options
 
 TODO [MED] Look into partial reset
 TODO [MED] answers that ignore non-acsii matching i.e. "suo" would be considered correct for answer that is šuo see unidecode

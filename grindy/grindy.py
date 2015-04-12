@@ -4,19 +4,26 @@ from datetime import datetime
 import time
 import random
 from colorama import Back, Fore
+
 from grindy import input_manager
-
 from grindy.deck import Deck
-
-# Output helpers
-from grindy.rating.rating_manager import rate, reduce_rating_by_time
-from grindy.rating.rating_settings import RATINGS
+from grindy.rating import rating_manager, rating_settings
 from grindy.utils import print_color
 
 
 class Grindy():
-    def __init__(self, deck_loc=None, reverse=False, **kwargs):
+    """Main application controller and manager
+    :param deck_loc: absolute location to deck that is being run
+    :param reverse: whether to switch questions and answers
+    :param flashcards: whether to run in flashcard mode rather than q/a
+
+    #kwargs
+    :param ignore_case[True]: whether to ignore case when matching questions and answers
+    :param auto_hints[True]: whether to generate automatic hints
+    """
+    def __init__(self, deck_loc=None, reverse=False, flashcards=False, **kwargs):
         self.reverse = reverse
+        self.flashcards = flashcards
         self.deck_loc = deck_loc or "decks/alphabet.json"
         self.deck = None
         self.stats = {'total_rating': 0,
@@ -53,14 +60,21 @@ class Grindy():
                         if previous_question.question is question.question:
                             continue
                 # Actual interaction
-                print_color('Q: {}'.format(question.question), back=Back.BLUE)
-                answer = input_manager.sinput('A: ', question=question, grindy=self)
-                if answer == input_manager.SKIP:  # this means question should be skipped
-                    continue
-                if not answer:
-                    print_color('Skipping question', Fore.RED)
-                    continue
-                self.check_answer(answer, question)
+                print_color('Q: {}'.format(question.question), back=Back.WHITE, color=Fore.BLACK)
+                if self.flashcards:
+                    answer = input_manager.sinput('R: ', question, self, flashcards=True)
+                    if answer == input_manager.SKIP:  # this means question should be skipped
+                        continue
+                    print_color('A: {}'.format(question.answer), back=Back.WHITE, color=Fore.BLACK)
+                    self.check_answer(answer, question, flashcard=True)
+                else:
+                    answer = input_manager.sinput('A: ', question=question, grindy=self)
+                    if answer == input_manager.SKIP:  # this means question should be skipped
+                        continue
+                    if not answer:
+                        print_color('Skipping question', Fore.RED)
+                        continue
+                    self.check_answer(answer, question)
 
                 previous_question = question
                 answered.append(question)
@@ -73,10 +87,12 @@ class Grindy():
             # Stats
             self.stats['total_time'] = (datetime.now() - start_time).seconds
             self.stats['answers'] = dict(self.stats['answers'])
+            if self.flashcards:
+                del self.stats['highest_streak']
             self.calculate_stats(old_deck)
             print('stats:', repr(self.stats))
 
-    def check_answer(self, answer, question):
+    def check_answer(self, answer, question, flashcard=False):
         """
         Checks question partially and asserts rating
         :param answer: input answer
@@ -86,8 +102,26 @@ class Grindy():
         gap = (datetime.now() - question.last_run).seconds
         question.last_run = datetime.now()
         question.times += 1
-        question.rating = reduce_rating_by_time(question.rating, gap / 3600)
+        question.rating = rating_manager.reduce_rating_by_time(question.rating, gap / 3600)
         reduced_rating = question.rating
+
+        if flashcard:
+            question.last_frating = answer
+            for rating, data in rating_settings.FRATINGS.items():
+                match_func = data['match_func']
+                if match_func(answer):
+                    rating_manager.rate(question, rating)
+                    self.stats['answers'][rating] += 1
+                    self.stats['answers']['total'] += 1
+                    if reduced_rating != old_rating:
+                        ratio_progress = '{}->{}->{}'.format(old_rating, reduced_rating, question.rating)
+                    else:
+                        ratio_progress = '{}->{}'.format(old_rating, question.rating)
+                    print_color('{} ({})'.format(data['result_text'], ratio_progress), data['color'])
+                    break
+            else:
+                print_color('No appropriate rating for {}!'.format(answer), Fore.RED)
+            return
 
         sm = SequenceMatcher()
         sm.set_seq1(answer.lower() if self.ignore_case else answer)
@@ -102,10 +136,10 @@ class Grindy():
         else:
             self.streak = 0  # reset streak
 
-        for rating, data in RATINGS.items():
+        for rating, data in rating_settings.RATINGS.items():
             match_func = data['match_func']
             if match_func(match):
-                rate(question, rating)
+                rating_manager.rate(question, rating)
                 self.stats['answers'][rating] += 1
                 self.stats['answers']['total'] += 1
                 if reduced_rating != old_rating:
@@ -147,7 +181,6 @@ class Grindy():
         new_deck = self.deck
         for index in range(len(new_deck)):
             self.stats['total_rating'] += new_deck[index].rating - old_deck[index].rating
-
 
         # Total time
         if self.stats['total_time'] > 3600:

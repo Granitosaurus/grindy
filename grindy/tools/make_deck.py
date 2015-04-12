@@ -9,6 +9,7 @@ def make_deck(save_location, name, update=False, list_of_tuples=None):
     """CLI for deck creation and update
     :param save_location: where the deck will be saved i.e. home/grindy/decks
     :param name: name of the deck
+    :param list_of_tuples: instead of direct input take this as input where list_of_tuples is [(question, answer),...]
     """
     questions = []
     name = name + '.json' if not name.endswith('.json') else name

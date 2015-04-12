@@ -27,7 +27,8 @@ class GrindyArgparser:
         """
         Main running function which executes the whole sequence with arguments by using 'argparse' module.
         """
-        self.parser.add_argument('-o', '--open', help='open deck <deckname>[.json]', metavar='DECK')
+        self.parser.add_argument('-o', '--open', help='open deck <DECK>', metavar='DECK')
+        self.parser.add_argument('-of', '--open_flashcards', help='open deck <DECK> as flashcard', metavar='DECK')
         self.parser.add_argument('-l', '--list', help='list decks', action='store_true')
         self.parser.add_argument('-rev', '--reverse', help='reverse questions and answers', action='store_true')
         self.parser.add_argument('-dl', '--download', help='download deck from direct url',
@@ -66,9 +67,9 @@ class GrindyArgparser:
             decks = []
             for url in repo_urls:
                 decks.extend(deck_repo(url))
-            for index, deck in enumerate(decks):
-                if args.repo_download == deck[0] or str(args.repo_download) == str(index):
-                    download_deck(deck[1], deck[0], self.deck_location)
+            for index, deck_name in enumerate(decks):
+                if args.repo_download == deck_name[0] or str(args.repo_download) == str(index):
+                    download_deck(deck_name[1], deck_name[0], self.deck_location)
                     return
                 print('No decks of name or #id of "{}" found'.format(args.repo_download))
 
@@ -80,8 +81,8 @@ class GrindyArgparser:
             print('_'*80)
             print(row('index', 'Name', 'Url'))
             print('_'*80)
-            for index, deck in enumerate(decks):
-                print(row(str(index), deck[0], deck[1]))
+            for index, deck_name in enumerate(decks):
+                print(row(str(index), deck_name[0], deck_name[1]))
 
         if args.init:
             self.initiate_grindy()
@@ -107,17 +108,19 @@ class GrindyArgparser:
                 logging.error('Deck "{}" not found! see grindy --list'.format(args.update_deck))
             print(self.deck_location, args.update_deck)
             make_deck(self.deck_location, args.update_deck, update=True)
-        if args.open:
-            args.open = args.open.replace('.json', '')
-            deck_location = self.get_deck_location(args.open)
+
+        deck_name = args.open or args.open_flashcards
+        if deck_name:
+            deck_name = deck_name.replace('.json', '')
+            deck_location = self.get_deck_location(deck_name)
             if deck_location:
-                print_color('Opening deck "{}":'.format(args.open), back=Back.BLUE)
+                print_color('Opening deck "{}":'.format(deck_name), back=Back.BLUE)
                 print_color('_'*80, back=Back.BLUE)
-                print(args.reverse)
                 grindy = Grindy(deck_loc=deck_location,
                                 reverse=args.reverse,
                                 auto_hints=not args.no_auto_hints,
-                                ignore_case=not args.case_sensitive)
+                                ignore_case=not args.case_sensitive,
+                                flashcards=True if args.open_flashcards else False)
                 grindy.run_deck()
             else:
                 sys.exit('Deck "{}" not found, see --list for the decks available'.format(args.open))

@@ -1,8 +1,11 @@
-from rating.ratting_settings import *
+from grindy.rating.rating_settings import *
 
 
 def reduce_rating_by_time(current_rating, gap_hours):
-    """Reduces rating according to the time gap between last run and the new one"""
+    """Reduces rating according to the time gap between last run and the new one
+    :param current_rating: current question rating
+    :param gap_hours: int hours gap between question runs
+    """
     for threshold, rating_per_hour in MINUS_RATING_PER_HOUR:
         if not threshold(gap_hours):
             continue
@@ -24,12 +27,12 @@ def rate(question, rating, value=None):
     """
     rating = str(rating)
     if not value:
-        if rating not in RATINGS and rating not in INPUT_RATINGS:
-            raise NotImplementedError('rating {} not found in RATINGS dict'.format(rating))
+        if rating not in RATINGS and rating not in FRATINGS:
+            raise NotImplementedError('rating {} not found in RATINGS or FRATINGS settings'.format(rating))
         try:
             value = RATINGS[rating]['value']
         except KeyError:
-            value = INPUT_RATINGS[rating]['value']
+            value = FRATINGS[rating]['value']
 
     def get_highest_time(times):
         highest = TIMES['NEW']

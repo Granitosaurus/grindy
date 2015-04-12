@@ -6,10 +6,14 @@ from logging import log, ERROR
 import re
 from urllib.parse import urljoin
 
+from grindy.rating import rating_manager
+
 
 class Deck:
     """
     Storage for Deck item
+    :param questions: list of Question objects
+    :param reverse: reverse questions and answers
     """
     def __init__(self, loc, questions=None, reverse=False):
         self.reverse = reverse
@@ -18,6 +22,7 @@ class Deck:
         self.questions = questions or []
         if not questions:
             self.read_questions()
+        self.update_deck()
 
     def read_questions(self):
         """reads deck file and creates questions and stores them in self"""
@@ -25,6 +30,14 @@ class Deck:
             data = json.loads(deck_file.read())
             for question in data['questions']:
                 self.questions.append(Question(json_item=question, reverse=self.reverse))
+
+    def update_deck(self):
+        """Updates deck to get reduce ratings of questions that have the maximum rating values"""
+        for question in self.questions:
+            if question.rating == 100:
+                gap = (datetime.now() - question.last_run).seconds / 3600  # hours
+                question.last_run = datetime.now()
+                question.rating = rating_manager.reduce_rating_by_time(question.rating, gap)
 
     def save_deck(self):
         """saves current deck object into a .json deck file"""
@@ -93,6 +106,16 @@ def deck_repo(url):
 class Question:
     """
     Storage for Question item
+    :param json_item: question can read data either from **kwargs or `json` item
+    :param reverse: whether to reverse questions and answers
+
+    :param question|q
+    :param answer|a
+    :param hint|h
+    :param rating|r
+    :param streak|s
+    :param frating|fr - last flashcard rating
+    :param last_run|lr
     """
     date_format = '%Y-%m-%d %H:%M:%S'
     rating = ''
@@ -110,7 +133,8 @@ class Question:
         self._rating = int(arg_container.get('rating', '0') or '0') or int(arg_container.get('r', '0'))
         self.streak = int(arg_container.get('streak', '0') or '0') or int(arg_container.get('s', '0'))
         self.times = int(arg_container.get('times', '0') or '0') or int(arg_container.get('t', '0'))
-        self.last_run = datetime.strptime(arg_container.get('last_run', None)
+        self.last_frating = arg_container.get('frating', '') or arg_container.get('fr', '')
+        self.last_run = datetime.strptime(arg_container.get('last_run', None) or arg_container.get('lr', None)
                                           or datetime.now().strftime(self.date_format), self.date_format)
 
     @property
@@ -127,6 +151,7 @@ class Question:
         self.rating = 0
         self.streak = 0
         self.times = 0
+        self.last_frating = ''
         self.last_run = datetime.now()
 
     def __dict__(self, reverse=False):

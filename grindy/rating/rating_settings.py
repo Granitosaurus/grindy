@@ -1,5 +1,19 @@
 from colorama import Fore
 
+# Flashcard ratings
+FRATINGS = {'easy': {'match_func': lambda x: x == 1,
+                     'result_text': 'EASY',
+                     'value': 50,
+                     'color': Fore.GREEN},
+            'medium': {'match_func': lambda x: x == 2,
+                       'result_text': 'MEDIUM',
+                       'value': 25,
+                       'color': Fore.YELLOW},
+            'hard': {'match_func': lambda x: x == 3,
+                     'result_text': 'HARD',
+                     'value': 10,
+                     'color': Fore.RED}}
+
 # Ratings
 RATINGS = {'correct':
                {'match_func': lambda x: x == 100,
