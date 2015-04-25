@@ -10,11 +10,18 @@ from grindy.utils import print_color
 SKIP = 0
 
 HELP = '''commands:
--h question hint if available.
--r question rating.
--t times question answered.
--lr last time the question was answered.
--set_rating set rating (0 =< value =< 100)'''
+-quit: quits the program
+-skip|-s: skips question
+-hint|-h: prints a hint
+-rating|-r: prints current rating
+-times|-t: prints how many times the question was answered
+-last_run|-lr: prints when was the Last Run of the question
+-delete|-del: deletes question
+-set_rating|-setr <value>: sets rating to provided value
+-set_question|-setq <value>: sets question to provided value
+-set_answer|-seta <value>: sets answer to provided value
+-set_hint|-seth <value>: changes the hint of the question
+'''
 
 
 def find_arguments(text):

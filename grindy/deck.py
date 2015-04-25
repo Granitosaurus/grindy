@@ -36,8 +36,11 @@ class Deck:
         for question in self.questions:
             if question.rating == 100:
                 gap = (datetime.now() - question.last_run).seconds / 3600  # hours
-                question.last_run = datetime.now()
                 question.rating = rating_manager.reduce_rating_by_time(question.rating, gap)
+                # if reduced, set new last run
+                if question.rating != 100:
+                    question.last_run = datetime.now()
+
 
     def save_deck(self):
         """saves current deck object into a .json deck file"""

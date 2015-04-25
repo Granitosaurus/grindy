@@ -7,7 +7,7 @@ import shutil
 from grindy.deck import Deck, download_deck, deck_repo
 from grindy.grindy import Grindy
 from grindy.settings import repo_urls
-from grindy.tools.make_deck import make_deck
+from grindy.tools.make_deck import DeckMaker
 from grindy.utils import LINE, print_color
 
 
@@ -101,13 +101,13 @@ class GrindyArgparser:
                 self.reset_deck(self.deck_location, args.reset_deck)
 
         if args.make_deck:
-            make_deck(self.deck_location, args.make_deck)
+            DeckMaker(self.deck_location, args.make_deck).make_deck()
         if args.update_deck:
             args.update_deck = args.update_deck.replace('.json', '')
             if not self.get_deck_location(args.update_deck):
                 logging.error('Deck "{}" not found! see grindy --list'.format(args.update_deck))
-            print(self.deck_location, args.update_deck)
-            make_deck(self.deck_location, args.update_deck, update=True)
+            print('Updating deck "{}"'.format(args.update_deck))
+            DeckMaker(self.deck_location, args.update_deck, update=True).make_deck()
 
         deck_name = args.open or args.open_flashcards
         if deck_name:

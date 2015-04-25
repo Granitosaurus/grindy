@@ -1,3 +1,10 @@
+0.42
+Fixed a bug in rating reduction where
+Added numbering to make_deck questions
+Refactored make_deck
+Added smart input to make_deck
+Added duplicate check to make_deck
+
 0.4
 Added flashcard deck support (open decks with -of|--open_flashcard) instead
 Fixed completed deck reduction bug

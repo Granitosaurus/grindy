@@ -2,9 +2,17 @@ TODO [undecided] gui deck maker
 TODO [undecided] multiple answer feature
 
 TODO [LOW] Add default color and color options
+TODO [LOW] remove "Q:" from "Q: deck <> has been saved!"
+TODO [LOW] proper output to deck creation
+TODO [LOW] deck creation question numbering
 
 TODO [MED] Look into partial reset
 TODO [MED] answers that ignore non-acsii matching i.e. "suo" would be considered correct for answer that is šuo see unidecode
 
+TODO [HIGH] add question check on deck creation to avoid duplicated questions
+TODO [HIGH] add list all questions to smart input
 TODO [HIGH] deck meta settings
+TODO [HIGH] add hint counter
+TODO [HIGH] add deck combine open, i.e. open multiple decks at once
 TODO [HIGH] proper example deck, maybe something with languages and new preview
+
